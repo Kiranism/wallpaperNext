@@ -18,7 +18,11 @@ export default async function page({ params }: { params: { slug: string } }) {
       <div className="flex gap-4 flex-col lg:flex-row ">
         <div className="flex-auto">
           {products?.map((product: Product) => (
-            <CardItem product={product} category={params.slug} />
+            <CardItem
+              key={product._id}
+              product={product}
+              category={params.slug}
+            />
           ))}
         </div>
         <div className="flex-none">
