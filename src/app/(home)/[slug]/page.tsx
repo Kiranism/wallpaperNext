@@ -23,7 +23,7 @@ export default async function page({ params }: { params: { slug: string } }) {
         </div>
         <div className="flex-none">
           {categories?.slice(0, productsLength).map((cat) => (
-            <Card isHover={false} category={cat} />
+            <Card isHover={false} category={cat} key={cat._id} />
           ))}
         </div>
       </div>

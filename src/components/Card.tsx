@@ -3,6 +3,7 @@ import React from "react";
 import { Product } from "../../types";
 import { urlFor } from "../../sanity";
 import Link from "next/link";
+import Image from "next/image";
 
 type CardProps = {
   isHover: boolean;
@@ -12,7 +13,7 @@ export function Card({ isHover, category }: CardProps) {
   return (
     <Link href={`/${category.slug.current}`}>
       <div className="relative my-5 h-[400px] lg:w-[300px]  rounded-md">
-        <img
+        <Image
           src={urlFor(category.image).url()}
           alt={category.slug.current}
           className="z-0 h-full w-full rounded-md object-cover"

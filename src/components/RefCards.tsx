@@ -14,7 +14,7 @@ export default function RefCards({ pins }: RefCardProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {pins?.map((pin) => (
-        <Link href={`/wallpaper/${pin?._id}`}>
+        <Link id={pin._id} href={`/wallpaper/${pin?._id}`}>
           <Card className="card w-full glass relative mb-5 h-52">
             <figure>
               {pin && pin.image && (
